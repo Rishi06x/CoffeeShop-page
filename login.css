@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(to right,#e1d4c2,#a78d78);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    width: 100%;
+    background-color: #fff;
+    max-width: 1200px;
+    min-height: 600px;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container .img {
+    width: 100%;
+    min-height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/login-coffee.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.container .img h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    margin-top: 60px;
+}
+
+.container .img p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.form h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.form-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 0 5px;
+    color: #666;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 14px;
+    background: white;
+    color: #6d4c41;
+    font-weight: 600;
+    transform: translateY(-50%);
+}
+
+.form-group input:focus {
+    border-color: #6d4c41;
+}
+
+.form #forgot-password {
+    text-decoration: none;
+    color: rgb(62, 101, 255);
+    align-self: center;
+    margin-left: 150px;
+    font-weight: 600;
+}
+
+.form #forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 10px;
+    border: 2px solid #2b2929;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form #login:hover {
+    background-color: #6d4c41;
+    color: white;
+    border: 2px solid #6d4c41;
+}
+
+.form #google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ececec;
+}
+
+.form #google svg {
+    width: 20px;
+    height: 20px;
+}
+
+.form #google:hover {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        border-radius: 20px;
+    }
+
+    .container .img {
+        border-radius: 20px;
+        min-height: 200px;
+    }
+
+    .container .img h1 {
+        margin-top: 30px;
+    }
+
+    .form {
+        padding: 30px 20px;
+    }
+
+    .form #forgot-password {
+        margin-right: 0;
+    }
+}
