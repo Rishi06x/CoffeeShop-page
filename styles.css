@@ -146,6 +146,88 @@ body{
     cursor: pointer;
 }
 
+/* About Section */
+#about {
+    background-color: #4e342e; 
+    max-width: 80%;
+    height: calc(100vh - 80px);
+    margin: 20px auto; 
+    padding: 80px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    color: #f3e5f5; 
+}
+
+#about h1 {
+    margin-top: 40px;
+    font-size: 2.5em; 
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#about p {
+    line-height: 1.8; 
+    color: #e0d7d5;
+    font-size: 1.2em;
+}
+
+#about h2, #about h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #d7ccc8; 
+    font-weight: 600;
+}
+
+#about .offer {
+    margin-top: 40px;
+}
+
+#about .offer ul {
+    list-style: none;
+    color: #ffe0b2; 
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+#about .offer ul li {
+    line-height: 40px;
+    text-align: justify;
+}
+#about .offer strong::before{
+ content: '☕ ';
+}
+#about .mission {
+    margin-top: 60px;
+}
+
+#about .scroll-btn {
+    width: 40px; 
+    height: 40px;
+    background-color: #6d4c41;
+    border-radius: 50%;
+    position: fixed; 
+    bottom: 25px; 
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1;
+}
+
+#about .scroll-btn:hover{
+    background-color: #A78D78;
+    transform: translateY(-2px );
+}
+#about .scroll-btn img {
+    width: 50%; 
+    height: 50%;
+    cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
 
@@ -217,5 +299,10 @@ body{
         display: flex;
         flex-direction: column;
         gap: 60px;
+    }
+
+    #about{
+        overflow-y: scroll;
+        font-size:small;
     }
 }
