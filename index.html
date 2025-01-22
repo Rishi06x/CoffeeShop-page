@@ -14,29 +14,33 @@
     />
   </head>
   <body>
-<div class="container">
+    <div class="container">
+
       <!-- Hero Section -->
+
       <section class="hero" id="hero">
         <header>
           <nav>
-              <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-              <label for="menu-toggle" class="icon">
-                <i class="fa-solid fa-bars" id="open"></i>
-                <i class="fa-solid fa-x" id="close"></i>
-              </label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="icon">
+              <i class="fa-solid fa-bars" style="color: #fff" id="open"></i>
+              <i class="fa-solid fa-x" style="color: #fff" id="close"></i>
+            </label>
             <span class="logo">
               <img src="./images/coffee-shop-logo.webp" alt="logo" />
               <em>Brew Haven</em>
             </span>
+            
             <div class="nav-links">
               <ul>
-                <li style="--i:1"><a href="#hero">HOME</a></li>
-                <li style="--i:2"><a href="#menu">MENU</a></li>
-                <li style="--i:3"><a href="#about">ABOUT</a></li>
-                <li style="--i:4"><a href="#contact">CONTACT</a></li>
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
               </ul>
             </div>
             <button id="SignUp-btn"><a href="login.html">Login</a></button>
+            
           </nav>
         </header>
         <div class="content">
@@ -48,48 +52,187 @@
           </div>
         </div>
       </section>
-
+      
       <!-- About Section -->
+
       <section id="about">
         <h1>About Us</h1>
-        <p>We provide the finest coffee blends crafted to perfection.</p>
+        <h2>
+          Welcome to <strong>Brew Haven</strong>, where every cup tells a story
+        </h2>
+        <p>
+          At Brew Haven, we believe coffee is more than just a beverage it's a
+          moment of joy and connection. Our cozy space is designed to be your
+          haven, whether you're looking to catch up with your friends, unwind
+          with a good book, or simply enjoy a great cup of coffee.
+        </p>
+        <div class="offer">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>
+              <strong>Artisan Coffee:</strong> From bold espressos to creamy
+              lattes, we serve a wide range of handcrafted beverages.
+            </li>
+            <li>
+              <strong>Fresh Pastries & Snacks:</strong> Perfectly paired with
+              your favorite drink, our selection of treats is baked fresh daily.
+            </li>
+            <li>
+              <strong>Welcoming Atmosphere:</strong> A warm and inviting space
+              to relax, work, or catch up.
+            </li>
+            <li>
+              <strong>Community Events:</strong> Enjoy open mic nights, book
+              clubs, and more, all while sipping your favorite coffee.
+            </li>
+          </ul>
+        </div>
+        <div class="mission">
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is simple: to create a space where everyone feels at
+            home while enjoying the finest coffee and treats.
+          </p>
+          <p>
+            Stop by Brew Haven today and let us brighten your day, one cup at a
+            time!
+          </p>
+        </div>
+        <div class="scroll-btn">
+          <a href="#hero"><img src="./images/arrow-up-solid.svg" alt="scroll" /></a>
+        </div>
       </section>
 
       <!-- Menu Section -->
-      <section class="menu-container">
-        <h1>Our Menu</h1>
+
+      <section class="menu-container" id="menu">
+        <h1>Coffee Shop Menu</h1>
         <div class="menu-section">
           <h2>Coffee</h2>
           <div class="menu-item">
+            <span>Espresso</span>
+            <span class="price">₹100</span>
+          </div>
+          <div class="menu-item">
+            <span>Americano</span>
+            <span class="price">₹120</span>
+          </div>
+          <div class="menu-item">
             <span>Cappuccino</span>
-            <span class="price">$4.00</span>
+            <span class="price">₹150</span>
           </div>
           <div class="menu-item">
             <span>Latte</span>
-            <span class="price">$3.50</span>
+            <span class="price">₹150</span>
+          </div>
+        </div>
+
+        <div class="menu-section">
+          <h2>Tea</h2>
+          <div class="menu-item">
+            <span>Classic Chai</span>
+            <span class="price">₹80</span>
+          </div>
+          <div class="menu-item">
+            <span>Masala Chai</span>
+            <span class="price">₹100</span>
+          </div>
+          <div class="menu-item">
+            <span>Green Tea</span>
+            <span class="price">₹90</span>
+          </div>
+        </div>
+
+        <div class="menu-section">
+          <h2>Snacks</h2>
+          <div class="menu-item">
+            <span>Croissant</span>
+            <span class="price">₹120</span>
+          </div>
+          <div class="menu-item">
+            <span>Blueberry Muffin</span>
+            <span class="price">₹100</span>
+          </div>
+          <div class="menu-item">
+            <span>Chocolate Brownie</span>
+            <span class="price">₹140</span>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <!-- Contact section -->
+
       <section id="contact">
         <div class="contact-form">
           <h2>Contact Us</h2>
-          <form action="#" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
+          <p>
+            We would love to hear from you!<br/>
+            Feel free to reach out to us using the form below.
+          </p>
+          <form>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" id="send-btn">Send Message</button>
           </form>
+
+          <div class="social-media">
+            <h3>Connect with Us</h3>
+            <a href="#"
+              ><img
+                src="./images/facebook-brands-solid.svg"
+                alt="facebook"
+                class="social-media-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="./images/x-twitter-brands-solid.svg"
+                alt="twitter"
+                class="social-media-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="./images/instagram-brands-solid.svg"
+                alt="instagram"
+                class="social-media-img"
+            /></a>
+          </div>
         </div>
       </section>
 
       <!-- Footer -->
+
       <footer>
-        <p>&copy; 2025 Brew Haven Coffee Shop. All Rights Reserved.</p>
+        <p>&copy; 2021 Brew Haven. All rights reserved.</p>
+        <div class="payment-methods">
+          <img
+            src="./images/cc-mastercard-brands-solid.svg"
+            alt="mastercard"
+            class="footer-img"
+          />
+          <img
+            src="./images/cc-paypal-brands-solid.svg"
+            alt="paypal"
+            class="footer-img"
+          />
+          <img
+            src="./images/google-pay-brands-solid.svg"
+            alt="google pay"
+            class="footer-img"
+          />
+        </div>
       </footer>
-    </div>  </body>
+
+      
+    </div>
+  </body>
 </html>
